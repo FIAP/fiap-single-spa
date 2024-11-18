@@ -1,0 +1,32 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+
+  -->
+
+  <main>
+    <application name="@bytebank/navbar"></application>
+    <route default>
+      <application name="@bytebank/dashboard"></application>
+    </route>
+    <route path="account" exact>
+      <application name="@bytebank/account"></application>
+    </route>
+    <route path="profile">
+      <application name="profile"></application>
+    </route>
+  </main>
+</single-spa-router>
